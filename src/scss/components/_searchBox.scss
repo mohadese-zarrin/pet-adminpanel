@@ -1,0 +1,40 @@
+.searchBox {
+    // width: 95%;
+    height: 48px;
+    display: flex;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+
+    .searchBox-section {
+        display: flex;
+        padding: 0px 14px;
+        width: 50%;
+        height: 100%;
+        align-items: center;
+        &.left {
+            justify-content: flex-end;
+            color: $main;
+            div{
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumb-text {
+        color: $disable;
+    }
+
+    .delete {
+        color: $remove;
+    }
+
+    i::before{
+        margin: 10px;
+    }
+
+}

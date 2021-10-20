@@ -1,0 +1,175 @@
+//Font Imports
+// @include font-face("Open Sans", "../fonts/open-sans/OpenSans-Light", 300, $file-formats: ttf);
+
+
+@font-face {
+	font-family: "iransans";
+	font-style: normal;
+	font-weight: 700;
+    font-display: swap;
+	src: url('../../assets/fonts/woff/IRANSansX-Bold.woff') format('woff'),   
+	url('../../assets/fonts/woff2/IRANSansX-Bold.woff2') format('woff2');	 
+}
+@font-face {
+	font-family: "iransans";
+	font-style: normal;
+	font-weight: 400;
+    font-display: swap;
+	src: url('../../assets/fonts/woff/IRANSansX-Regular.woff') format('woff'),   
+	url('../../assets/fonts/woff2/IRANSansX-Regular.woff2') format('woff2');	
+}
+@font-face {
+	font-family: "pika";
+	font-style: normal;
+	font-weight: 700;
+    font-display: swap;
+	src: url('../../assets/fonts/pika/Pika-Light.woff') format('woff'),   
+	url('../../assets/fonts/pika/Pika-Light.eot') format('eot');	 
+}
+body, p, a, span, ul, div, li, h1, h2, h3, h4, h5, h6, button, input, select {
+    font-family: "iransans";
+}
+// body, .submenu, .primerybtn, .secondrybtn, .settablerow select, input, textarea, select {
+//     font-size: 1vw;
+// }
+// body, .submenu {
+//     font-weight: 400;
+// }
+i, i::before {
+    display: flex;
+    font-family: "pika"; 
+    font-style: normal;
+    font-size:35px ;
+    // margin-left: 5px;
+    // font-size: 2vw;
+}
+
+i.product::before {
+    content: "\1f3ea";
+}
+
+i.pen::before {
+    content: "\1f589";
+}
+
+i.home::before {
+    content: "\1f3e0";
+}
+
+i.orders::before {
+    content: "\1f6d2";
+}
+
+i.wallet::before {
+    content: "\1f45b";
+}
+
+i.user::before {
+    content: "\1f464";
+}
+
+i.users::before {
+    content: "\1f465";
+}
+
+i.user-group::before {
+    content: "\1f46a";
+}
+
+i.chart::before {
+    content: "\1f4ca";
+}
+
+i.message::before {
+    content: "\2709";
+}
+
+i.about::before {
+    content: "\2139";
+}
+
+i.faq::before {
+    content: "\3f";
+}
+
+i.paper::before {
+    content: "\1f4dc";
+}
+
+i.setting::before {
+    content: "\2699";
+}
+
+i.logout::before {
+    content: "\1f6aa";
+}
+
+i.remove::before {
+    content: "\1f5d1";
+}
+i.page::before {
+    content: "\1f4dc";
+}
+
+i.close::before {
+    content: "\274c";
+}
+
+i.plus::before {
+    content: "\2b";
+}
+
+i.search::before {
+    content: "\1f50d";
+} 
+
+i.filter::before {
+    content: "\25d4";
+}
+// i.search::after {
+//     content: "\1f50d";
+// }
+// i.filter::after {
+//     content: "\25d4";
+// }
+i.image::before {
+    content: "\1f304";
+}
+
+i.percent::before {
+    content: "\25";
+}
+
+i.simcard::before {
+    content: "\1f4f6";
+}
+
+i.ascending-Line::before{
+    content: "\1f4c8";
+}
+
+i.tick::before{
+    content: "\2705";
+}
+
+// .topsidebar p, .firstlevel.active {
+//     font-size: 1.2vw;
+// }
+// .topsidebar p, .primerybtn, .secondrybtn {
+//     font-weight: bold;
+// }
+// .firstlevel.active, .submenu .active {
+//     font-weight: 700;
+// }
+// .breadcrumd a, .customizefileupload p {
+//     font-size: 1.1vw;
+// }
+// p.inputdesc {
+//     font-size: 0.9vw;
+// }
+// .listinput .lists .listitem i, .sectionrow .input > p, .customizefileupload p, .customizefileupload i::before, .sectionrow > .listinput > .title > p, p.switchtext, .propertyitem i.closeicon, .dataitemtitle, .searchandfilter .title, .linelist .linetitle, .propertylistitem {
+//     font-weight: bold;
+// }
+// .customizefileupload i::before {
+//     font-size: 10vw;
+// }

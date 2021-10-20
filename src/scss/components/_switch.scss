@@ -1,0 +1,53 @@
+@keyframes switch-on {
+    from {
+        left: 4px;
+    }
+
+    to {
+        left: 28px
+    }
+}
+@keyframes switch-off {
+    from {
+        left: 28px;
+    }
+
+    to {
+        left: 4px
+    }
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    width: 48px;
+    height: 24px;
+    // padding: 3px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #EBEBEB;
+    &.on{
+        background-color: $main-light;
+        border: 1px solid $main;
+    }
+    .indicator {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        background-color: black;
+        border-radius: 4px;
+
+        &.toggleOn {
+            animation: switch-on .10s linear;
+            left: 28px;
+            background-color: $main;
+        }
+
+        &.toggleOff {
+            left:4px;
+            animation: switch-off .15s linear;
+        }
+    }
+}

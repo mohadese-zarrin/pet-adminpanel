@@ -1,0 +1,22 @@
+.header{
+    width: 100%;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    border: 1px solid $border-color;
+    .header-section{
+        // border: 1px solid black;
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+    .logout{
+        padding:0px 32px;
+    }
+    .left{
+        justify-content: flex-end;
+    }
+    i::before{
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,22 @@
+.checkbox {
+    display: flex;
+    width: 28px;
+    aspect-ratio: 1;
+    border: 1px solid $main;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    &:hover{
+        background-color: rgb(212, 209, 209);
+    }
+    &.checked{
+        background-color: $main;
+    }
+    input {
+        display: none;
+    }
+    i::before{
+        font-size: 35px;
+    }
+}

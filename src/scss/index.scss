@@ -1,0 +1,31 @@
+// @charset 'utf-8';
+
+//TODO delete helper lines in the end of project
+//top  right  bottom  left
+//top-buttom  right-left
+//border:width  style(required)  color
+
+
+
+
+//Vendor
+// @import "vendor/__vendor-dir";
+
+//Abstracts
+@import "./abstract/_abstracts-dir";
+
+// // //Base Styles
+@import "base/__base-dir";
+
+// //Components
+@import "components/__components-dir";
+
+// //Layout
+@import "layouts/__layouts-dir";
+
+// body {
+//     background-color:white;
+// }
+.main-content{
+    display: flex;
+}
