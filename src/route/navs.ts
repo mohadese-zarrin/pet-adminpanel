@@ -1,143 +1,161 @@
-const navs=[
+const navs = [
     {
-        name:'خانه',
-        to:'/',
-        icon:'home',
-    },
-    {
-        name:'مدیریت کاربران',
-        to:'/user-contacts',
-        icon:'user-group',
-        children:[
+        name: 'محصولات',
+        to: '/products-allProduct',
+        icon: 'product',
+        children: [
             {
-                name:'مخاطبین',
-                to:'/user-contacts'
+                name: 'همه محصولات',
+                to: '/products-allProduct'
             },
             {
-                name:'کانال ها',
-                to:'/user-channels'
+                name: 'دسته بندی‌ها',
+                to: '/products-categories'
+            },
+            {
+                name: 'برچسب‌ها',
+                to: '/products-tags'
+            },
+            {
+                name: 'ویژگی‌ها',
+                to: '/products-speciallTags'
+            },
+            {
+                name: 'سفارشات',
+                to: '/products-orders'
+            },
+            {
+                name: 'حیوانات',
+                to: '/products-pets'
             }
         ]
     },
     {
-        name:'مدیریت محتوا',
-        to:'/content-ads',
-        icon:'image',
-        children:[
+        name: 'دامپزشک‌ها',
+        to: '/doctors-doctor_management',
+        icon: 'stethoscope-mini',
+        children: [
             {
-                name:'تبلیغات',
-                to:'/content-ads'
+                name: 'مدیریت دامپزشک‌ها',
+                to: '/doctors-doctor_management'
             },
             {
-                name:'دسته‌بندی تبلیغات',
-                to:'/content-adsCategory'
-            },
-            {
-                name:'تگ‌های تبلیغات',
-                to:'/content-adsTags'
-            },
-            {
-                name:'تیزر‌ها',
-                to:'/content-tisers'
-            },
-            {
-                name:'دسته‌بندی تیزر‌ها',
-                to:'/content-tisersCategory'
-            },
-            {
-                name:'اسلایدشو',
-                to:'/content-slideshow'
+                name: 'ویزیت‌ها',
+                to: '/doctors-visits'
             }
         ]
     },
     {
-        name:'جوایز و تخفیف‌ها',
-        to:'/special-presents',
-        icon:'percent',
-        children:[
+        name: 'ویرایش صفحه اصلی',
+        to: '/edit-videos',
+        icon: 'pen',
+        children: [
             {
-                name:'هدایا',
-                to:'/special-presents'
+                name: 'ویدیو‌ها',
+                to: '/edit-videos'
             },
             {
-                name:'قرعه‌کشی',
-                to:'/special-lotteries'
-            },
-            {
-                name:'گردونه‌ی شانس',
-                to:'/special-roundOfLuck'
-            },
-            {
-                name:'بن های تخفیف',
-                to:'/special-coupons'
-            },
-            {
-                name:'دسته‌بندی بن‌ها',
-                to:'/special-couponCategories'
-            },
-            {
-                name:'درخواست‌ها',
-                to:'/special-requests'
+                name: 'بنر‌ها',
+                to: '/edit-baners'
             }
         ]
     },
     {
-        name:'مدیریت مالی',
-        to:'/financial-internalTransactions',
-        icon:'wallet',
-        children:[
+        name: 'نظرات',
+        to: '/comments-product',
+        icon: 'chat',
+        children: [
             {
-                name:'تراکنش‌های داخلی',
-                to:'/financial-internalTransactions'
+                name: 'محصولات',
+                to: '/comments-product'
             },
             {
-                name:'تراکنش‌های خارجی',
-                to:'/financial-externalTransactions'
-            },
-            {
-                name:'درخواست‌های تسویه',
-                to:'/financial-checkoutRequests'
+                name: 'دامپزشک‌ها',
+                to: '/comments-doctors'
             }
         ]
     },
     {
-        name:'پیام ها',
-        to:'/messages-send',
-        icon:'message',
-        children:[
+        name: 'مدیریت مالی',
+        to: '/financial-internalTransactions',
+        icon: 'wallet',
+        children: [
             {
-                name:'پیام‌های ارسالی',
-                to:'/messages-send'
+                name: 'تراکنش‌ها',
+                to: '/financial-internalTransactions'
             },
             {
-                name:'پیام‌های دریافتی',
-                to:'/messages-recive'
+                name: 'درخواست‌های تسویه',
+                to: '/financial-checkoutRequests'
+            },
+            {
+                name: 'هدیه',
+                to: '/financial-externalTransactions'
+            },
+            {
+                name: 'کدتخفیف',
+                to: '/financial-externalTransactions'
             }
         ]
     },
     {
-        name:'صفحات برنامه',
-        to:'/appPages-aboutUs',
-        icon:'paper',
-        children:[
+        name: 'مدیریت مشتریان',
+        to: '/customers-customers',
+        icon: 'user-group',
+        children: [
             {
-                name:'درباره‌ی ما',
-                to:'/appPages-aboutUs'
+                name: 'مشتریان',
+                to: '/customers-customers'
             },
             {
-                name:'سوالات متداول',
-                to:'/appPages-faq'
-            },
-            {
-                name:'دسته‌بندی سوالات',
-                to:'/appPages-faqCategories'
+                name: 'عضویت ویژه',
+                to: '/customers-vip'
             }
         ]
     },
     {
-        name:'تنظیمات',
-        to:'/setting',
-        icon:'setting',
+        name: 'آمار',
+        to: '/statistics-doctors_statistics',
+        icon: 'bar-chart',
+        children: [
+            {
+                name: 'دامپزشک',
+                to: '/statistics-doctors_statistics'
+            },
+            {
+                name: 'محصولات',
+                to: '/statistics-product_statistics'
+            },
+            {
+                name: 'تجمعی',
+                to: '/statistics-total'
+            }
+        ]
+    },
+    {
+        name: 'پیام‌ها',
+        to: '/semessagestting',
+        icon: 'message',
+    },
+    {
+        name: 'درباره ما',
+        to: '/aboutUs',
+        icon: 'info',
+    },
+    {
+        name: 'سوالات متداول',
+        to: '/faq',
+        icon: 'faq',
+    },
+    {
+        name: 'قوانین و مقررات',
+        to: '/terms',
+        icon: 'paper',
+    },
+    {
+        name: 'تنظیمات',
+        to: '/setting',
+        icon: 'setting',
     }
 ]
 export default navs

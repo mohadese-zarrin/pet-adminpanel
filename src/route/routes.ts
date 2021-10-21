@@ -1,71 +1,96 @@
 import { lazy } from "react";
 
-//home tab
-const home=lazy(()=>import('../pages/home'))
-//user tab
-const contacts=lazy(()=>import ('../pages/users/contacts'))
-const channels=lazy(()=>import ('../pages/users/channels'))
-//content tab
-const ads=lazy(()=>import('../pages/content/ads'))
-const adsCategory=lazy(()=>import('../pages/content/adsCategory'))
-const adsTags=lazy(()=>import('../pages/content/adsTags'))
-const tisers=lazy(()=>import('../pages/content/tisers'))
-const tisersCategory=lazy(()=>import('../pages/content/tisersCategory'))
-const slideshow=lazy(()=>import('../pages/content/slideshow'))
-//special tab
-const presents=lazy(()=>import('../pages/special/presents'))
-const lotteries=lazy(()=>import('../pages/special/lotteries'))
-const roundOfLuck=lazy(()=>import('../pages/special/roundOfLuck'))
-const coupons=lazy(()=>import('../pages/special/coupons'))
-const couponCategories=lazy(()=>import('../pages/special/couponCategories'))
-const requests=lazy(()=>import('../pages/special/requests'))
+//product tab
+const allProduct=lazy(()=>import('../pages/product/allProduct'))
+const categories=lazy(()=>import ('../pages/product/categories'))
+const tags=lazy(()=>import ('../pages/product/tags'))
+const speciallTags=lazy(()=>import ('../pages/product/speciallTags'))
+const orders=lazy(()=>import ('../pages/product/orders'))
+const pets=lazy(()=>import ('../pages/product/pets'))
+
+//doctors tab
+const doctor_management=lazy(()=>import('../pages/doctors/doctor-management'))
+const visits=lazy(()=>import('../pages/doctors/visits'))
+
+//edit tab
+const baners=lazy(()=>import('../pages/edit/baners'))
+const videos=lazy(()=>import('../pages/edit/videos'))
+
+//comments tab
+const product=lazy(()=>import('../pages/comments/products'))
+const doctors=lazy(()=>import('../pages/comments/doctors'))
+
 //financial tab
-const internalTransactions=lazy(()=>import('../pages/financial/internalTransactions'))
-const externalTransactions=lazy(()=>import('../pages/financial/externalTransactions'))
-const checkoutRequests=lazy(()=>import('../pages/financial/checkoutRequests'))
-//messages tab
-const send=lazy(()=>import('../pages/messages/send'))
-const recive=lazy(()=>import('../pages/messages/recive'))
-//appPages tab
-const aboutUs=lazy(()=>import('../pages/appPages/aboutUs'))
-const faq=lazy(()=>import('../pages/appPages/faq'))
-const faqCategories=lazy(()=>import('../pages/appPages/faqCategories'))
-//setting tab
+const checkoutRequests=lazy(()=>import('../pages/financial/checkoutReq'))
+const gifts=lazy(()=>import('../pages/financial/gifts'))
+const transactions=lazy(()=>import('../pages/financial/transactions'))
+const discuntCodes=lazy(()=>import('../pages/financial/discuntCodes'))
+
+//customers tab
+const vip=lazy(()=>import ('../pages/customer/vip'))
+const customers=lazy(()=>import ('../pages/customer/customers'))
+
+//statistics tab
+const doctors_statistics=lazy(()=>import('../pages/statistics/doctors'))
+const product_statistics=lazy(()=>import ('../pages/statistics/products'))
+const total=lazy(()=>import ('../pages/statistics/total'))
+
+//
+const messages=lazy(()=>import('../pages/messages'))
+
+//
+const aboutUs=lazy(()=>import('../pages/product/allProduct'))
+
+//
+const faq=lazy(()=>import('../pages/faq'))
+
+//
+const terms=lazy(()=>import('../pages/terms'))
+
+//
 const setting=lazy(()=>import('../pages/setting'))
 
-
 const routes=[
-    {path:'/',exact:true,name:'home',component:home},
+    {path:'/',exact:true,name:'allProduct',component:allProduct},
 
-    {path:'/user-contacts',exact:true,name:'contacts',component:contacts},
-    {path:'/user-channels',exact:true,name:'channels',component:channels},
+    {path:'/products-allProduct',exact:true,name:'allProduct',component:allProduct},
+    {path:'/products-categories',exact:true,name:'categories',component:categories},
+    {path:'/products-tags',exact:true,name:'tags',component:tags},
+    {path:'/products-speciallTags',exact:true,name:'speciallTags',component:speciallTags},
+    {path:'/products-orders',exact:true,name:'orders',component:orders},
+    {path:'/products-pets',exact:true,name:'pets',component:pets},
 
-    {path:'/content-ads',exact:true,name:'ads',component:ads},
-    {path:'/content-adsCategory',exact:true,name:'adsCategory',component:adsCategory},
-    {path:'/content-adsTags',exact:true,name:'adsTags',component:adsTags},
-    {path:'/content-tisers',exact:true,name:'tisers',component:tisers},
-    {path:'/content-tisersCategory',exact:true,name:'tisersCategory',component:tisersCategory},
-    {path:'/content-slideshow',exact:true,name:'slideshow',component:slideshow},
+    {path:'/doctors-doctor_management',exact:true,name:'doctor_management',component:doctor_management},
+    {path:'/doctors-visits',exact:true,name:'visits',component:visits},
 
-    {path:'/special-presents',exact:true,name:'presents',component:presents},
-    {path:'/special-lotteries',exact:true,name:'lotteries',component:lotteries},
-    {path:'/special-roundOfLuck',exact:true,name:'roundOfLuck',component:roundOfLuck},
-    {path:'/special-coupons',exact:true,name:'coupons',component:coupons},
-    {path:'/special-couponCategories',exact:true,name:'couponCategories',component:couponCategories},
-    {path:'/special-requests',exact:true,name:'requests',component:requests},
+    {path:'/edit-baners',exact:true,name:'baners',component:baners},
+    {path:'/edit-videos',exact:true,name:'videos',component:videos},
 
-    {path:'/financial-internalTransactions',exact:true,name:'internalTransactions',component:internalTransactions},
-    {path:'/financial-externalTransactions',exact:true,name:'externalTransactions',component:externalTransactions},
+    {path:'/comments-product',exact:true,name:'product',component:product},
+    {path:'/comments-doctors',exact:true,name:'doctors',component:doctors},
+
     {path:'/financial-checkoutRequests',exact:true,name:'checkoutRequests',component:checkoutRequests},
+    {path:'/financial-gifts',exact:true,name:'gifts',component:gifts},
+    {path:'/financial-transactions',exact:true,name:'transactions',component:transactions},
+    {path:'/financial-discuntCodes',exact:true,name:'discuntCodes',component:discuntCodes},
 
-    {path:'/messages-send',exact:true,name:'send',component:send},
-    {path:'/messages-recive',exact:true,name:'recive',component:recive},
+    {path:'/customers-vip',exact:true,name:'vip',component:vip},
+    {path:'/customers-customers',exact:true,name:'customers',component:customers},
 
-    {path:'/appPages-aboutUs',exact:true,name:'aboutUs',component:aboutUs},
-    {path:'/appPages-faq',exact:true,name:'faq',component:faq},
-    {path:'/appPages-faqCategories',exact:true,name:'faqCategories',component:faqCategories},
+    {path:'/statistics-doctors_statistics',exact:true,name:'doctors_statistics',component:doctors_statistics},
+    {path:'/statistics-product_statistics',exact:true,name:'product_statistics',component:product_statistics},
+    {path:'/statistics-total',exact:true,name:'total',component:total},
 
-    {path:'/setting',exact:true,name:'setting',component:setting},
+
+    {path:'/messages',exact:true,name:'messages',component:messages},
+
+    {path:'/aboutUs',exact:true,name:'aboutUs',component:aboutUs},
+
+    {path:'/faq',exact:true,name:'faq',component:faq},
+
+    {path:'/terms',exact:true,name:'terms',component:terms},
+
+    {path:'/setting',exact:true,name:'setting',component:messages},
 
 ]
 

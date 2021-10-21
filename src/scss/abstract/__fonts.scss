@@ -48,9 +48,22 @@ i.product::before {
     content: "\1f3ea";
 }
 
+i.info::before {
+    content: "\21";
+}
+
+i.stethoscope-mini::before {
+    content: "\1f691";
+}
+
 i.pen::before {
     content: "\1f589";
 }
+
+i.chat::before {
+    content: "\1f4ad";
+}
+
 
 i.home::before {
     content: "\1f3e0";
@@ -76,7 +89,7 @@ i.user-group::before {
     content: "\1f46a";
 }
 
-i.chart::before {
+i.bar-chart::before {
     content: "\1f4ca";
 }
 
