@@ -2,6 +2,8 @@ import { lazy } from "react";
 
 //product tab
 const allProduct=lazy(()=>import('../pages/product/allProduct'))
+const product=lazy(()=>import('../pages/product/allProduct/product'))
+
 const categories=lazy(()=>import ('../pages/product/categories'))
 const tags=lazy(()=>import ('../pages/product/tags'))
 const speciallTags=lazy(()=>import ('../pages/product/speciallTags'))
@@ -17,7 +19,7 @@ const baners=lazy(()=>import('../pages/edit/baners'))
 const videos=lazy(()=>import('../pages/edit/videos'))
 
 //comments tab
-const product=lazy(()=>import('../pages/comments/products'))
+const products=lazy(()=>import('../pages/comments/products'))
 const doctors=lazy(()=>import('../pages/comments/doctors'))
 
 //financial tab
@@ -54,6 +56,8 @@ const routes=[
     {path:'/',exact:true,name:'allProduct',component:allProduct},
 
     {path:'/products-allProduct',exact:true,name:'allProduct',component:allProduct},
+    {path:'/products-allProduct-product',exact:true,name:'product',component:product},
+
     {path:'/products-categories',exact:true,name:'categories',component:categories},
     {path:'/products-tags',exact:true,name:'tags',component:tags},
     {path:'/products-speciallTags',exact:true,name:'speciallTags',component:speciallTags},
@@ -66,7 +70,7 @@ const routes=[
     {path:'/edit-baners',exact:true,name:'baners',component:baners},
     {path:'/edit-videos',exact:true,name:'videos',component:videos},
 
-    {path:'/comments-product',exact:true,name:'product',component:product},
+    {path:'/comments-products',exact:true,name:'products',component:products},
     {path:'/comments-doctors',exact:true,name:'doctors',component:doctors},
 
     {path:'/financial-checkoutRequests',exact:true,name:'checkoutRequests',component:checkoutRequests},

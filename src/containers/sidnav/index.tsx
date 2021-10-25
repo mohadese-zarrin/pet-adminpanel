@@ -1,27 +1,29 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import navs from '../../route/navs'
+
 interface SideNavProps {
     nav: string
 }
 
 function SideNav() {
+    const history = useHistory()
+    const [selectedNav, setSelectedNav] = useState('')
+    const [selectedChild, setSelectedChild] = useState('')
 
-    const [selectedNav, setSelectedNav] = useState(0)
-    const [selectedChild, setSelectedChild] = useState(0)
+    useEffect(() => {
+        return history.listen(() => {
+            if (history.action === 'PUSH') {
+                setSelectedChild(history.location.pathname)
+                setSelectedNav(history.location.pathname.split('-')[0])
 
-
-    const handleSelectNav = (index: number) => {
-        // if(navs[index].children){
-        //     return
-        // }else{
-        //     setSelectedNav(index)
-        // }
-        setSelectedNav(index)
-        setSelectedChild(0)
-    }
-    console.log(selectedNav, 'hdshdhdh');
-
+            }
+            if (history.action === 'POP') {
+                setSelectedChild(history.location.pathname)
+                setSelectedNav(history.location.pathname.split('-')[0])
+            }
+        })
+    }, [])
     return (
         <aside>
             <div className='profile'>
@@ -29,15 +31,15 @@ function SideNav() {
             </div>
             <ul>
                 {navs.map((data, index) =>
-                    <li key={index} className={`nav-item ${selectedNav == index && 'selected'} `}>
-                        <Link onClick={() => handleSelectNav(index)} to={data.to} className={`nav-item-header ${index==selectedNav-1&& 'nav-border'}`} >
+                    <li key={index} className={`nav-item ${selectedNav == data.tag && 'selected'} `}>
+                        <Link to={data.to} className={`nav-item-header`} >
                             <i className={data.icon} />
                             <h3>{data.name}</h3>
                         </Link>
                         {data.children &&
                             <ul className={`nav-children`}>
                                 {data.children.map((item, i) =>
-                                    <Link onClick={() => setSelectedChild(i)} to={item.to} className={`nav-children-item ${selectedNav == index && selectedChild == i && 'selected-children'}`} key={i}>
+                                    <Link  to={item.to} className={`nav-children-item ${selectedNav == data.tag && selectedChild == item.to && 'selected-children'}`} key={i}>
                                         <h4>{item.name}</h4>
                                     </Link>
                                 )}

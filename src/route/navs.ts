@@ -1,6 +1,7 @@
 const navs = [
     {
         name: 'محصولات',
+        tag: '/products',
         to: '/products-allProduct',
         icon: 'product',
         children: [
@@ -27,12 +28,17 @@ const navs = [
             {
                 name: 'حیوانات',
                 to: '/products-pets'
+            },
+            {
+                name: 'حیوانات',
+                to: '/products-pets'
             }
         ]
     },
     {
         name: 'دامپزشک‌ها',
         to: '/doctors-doctor_management',
+        tag: '/doctors',
         icon: 'stethoscope-mini',
         children: [
             {
@@ -48,6 +54,7 @@ const navs = [
     {
         name: 'ویرایش صفحه اصلی',
         to: '/edit-videos',
+        tag: '/edit',
         icon: 'pen',
         children: [
             {
@@ -62,12 +69,13 @@ const navs = [
     },
     {
         name: 'نظرات',
-        to: '/comments-product',
+        to: '/comments-products',
+        tag: '/comments',
         icon: 'chat',
         children: [
             {
                 name: 'محصولات',
-                to: '/comments-product'
+                to: '/comments-products'
             },
             {
                 name: 'دامپزشک‌ها',
@@ -78,6 +86,7 @@ const navs = [
     {
         name: 'مدیریت مالی',
         to: '/financial-internalTransactions',
+        tag: '/financial',
         icon: 'wallet',
         children: [
             {
@@ -101,6 +110,7 @@ const navs = [
     {
         name: 'مدیریت مشتریان',
         to: '/customers-customers',
+        tag: '/customers',
         icon: 'user-group',
         children: [
             {
@@ -116,6 +126,7 @@ const navs = [
     {
         name: 'آمار',
         to: '/statistics-doctors_statistics',
+        tag: '/statistics',
         icon: 'bar-chart',
         children: [
             {
@@ -134,27 +145,32 @@ const navs = [
     },
     {
         name: 'پیام‌ها',
-        to: '/semessagestting',
+        to: '/messages',
+        tag: '/messages',
         icon: 'message',
     },
     {
         name: 'درباره ما',
         to: '/aboutUs',
+        tag: '/aboutUs',
         icon: 'info',
     },
     {
         name: 'سوالات متداول',
         to: '/faq',
+        tag: '/faq',
         icon: 'faq',
     },
     {
         name: 'قوانین و مقررات',
         to: '/terms',
+        tag: '/terms',
         icon: 'paper',
     },
     {
         name: 'تنظیمات',
         to: '/setting',
+        tag: '/setting',
         icon: 'setting',
     }
 ]

@@ -1,31 +1,20 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router';
 import CheckBox from '../../../components/checkBox';
 import Header from '../../../components/Header';
 import SearchBox from '../../../components/searchBox'
 const mockData = [
     {
-        mobile: '0123456789',
-        name: 'user name',
-        date: '2022-12-02',
-        credit: 1000,
-        status: false
-    },
-    {
-        mobile: '0123456789',
-        name: 'user name',
-        date: '2022-12-02',
-        credit: 1000,
-        status: false
-    },
-    {
-        mobile: '0123456789',
-        name: 'user name',
-        date: '2022-12-02',
-        credit: 1000,
-        status: false
-    },
+        pet_type: 'cat',
+        name: 'غذای گربه',
+        stock: 50,
+        category: 'food',
+        amount: 1000,
+        sell:20
+    }
 ]
 function ContactList() {
+    const history=useHistory()
     console.log('infhfhfhfhfhfh');
     const [selectAll, setSelectAll] = useState(false)
     const [filterMode, setFilterMode] = useState(false)
@@ -37,7 +26,7 @@ function ContactList() {
         <div>
             <Header
                 btns={[
-                    { lable: 'ایجاد مخاطب', onPress: () => console.log('ایجاد مخاطب') }
+                    { lable: 'ایجاد محصول جدید', onPress: () => history.push('products-allProduct-product') }
                 ]}
             />
             <div className='main'>
@@ -45,27 +34,29 @@ function ContactList() {
                     selected={false}
                     breadcrumb={['مدیریت کاربران', 'مخاطبین']}
                     delete={()=>console.log('delete')}
-                    setFilter={()=>console.log('filter')}
+                    // setFilter={()=>console.log('filter')}
                     setSelectAll={()=>console.log('set select all')}
                 />
-                {/* ContactList */}
                 <table className="table">
                     <thead>
                         <tr>
                             <th>
-                                <div>شماره موبایل</div>
+                                <div>نام محصول</div>
                             </th>
                             <th>
-                                <div>نام و نام خانوادگی</div>
+                                <div>{'موجودی(عدد)'}</div>
                             </th>
                             <th>
-                                <div>تاریخ عضویت</div>
+                                <div>دسته‌بندی</div>
                             </th>
                             <th>
-                                <div>اعتبار</div>
+                                <div>نوع حیوان</div>
                             </th>
                             <th>
-                                <div>وضعیت</div>
+                                <div>مبلغ</div>
+                            </th>
+                            <th>
+                                <div>میزان فروش(عدد)</div>
                             </th>
                             <th>
                                 <div></div>
@@ -79,19 +70,22 @@ function ContactList() {
                                 <td>
                                     {/* <Link to="/products-SingleProduct">{data.name}</Link> */}
                                     {/* <div onClick={() => history.push(`/products-SingleProduct/${data.id}`)}>{data.title}</div> */}
-                                    <div>{data.mobile}</div>
-                                </td>
-                                <td>
                                     <div>{data.name}</div>
                                 </td>
                                 <td>
-                                    <div>{data.date}</div>
+                                    <div>{data.stock}</div>
                                 </td>
                                 <td>
-                                    <div>{data.credit}</div>
+                                    <div>{data.category}</div>
                                 </td>
                                 <td>
-                                    <div>{data.status ? 'فعال' : 'غیر فعال'}</div>
+                                    <div>{data.pet_type}</div>
+                                </td>
+                                <td>
+                                    <div>{data.amount}</div>
+                                </td>
+                                <td>
+                                    <div>{data.sell}</div>
                                 </td>
                                 <td>
                                     <CheckBox setCheck={() => console.log('set check')} />

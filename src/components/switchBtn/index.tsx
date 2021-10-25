@@ -4,11 +4,9 @@ interface switchProps{
     status:boolean
     setSwitch?:()=>void
 }
-function CheckBox(props:switchProps) {
+function SwitchBtn(props:switchProps) {
 
     const [status, setStatus] = useState(props.status)
-    const checkboxRef = useRef<HTMLInputElement>(null);
-    console.log(checkboxRef, 'checkboxRef');
 
 
     const handleSwitch = () => {
@@ -25,4 +23,4 @@ function CheckBox(props:switchProps) {
     )
 }
 
-export default CheckBox
+export default SwitchBtn

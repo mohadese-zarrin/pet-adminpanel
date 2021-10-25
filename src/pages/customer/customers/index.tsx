@@ -10,7 +10,7 @@ function ChannelList() {
         <div>
             <div className='main'>
                 {/* FIXME : responsive state */}
-                {/* <SwitchBtn status={status}/>*/}
+                <SwitchBtn status={status}/>
                 <ProgressBar/>
             </div>
             {/* <div onClick={()=>setStatus(!status)}>channels</div> */}

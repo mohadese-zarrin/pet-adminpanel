@@ -1,0 +1,30 @@
+.radiobutton-container{
+    display: flex;
+    align-items: center;
+    .radiobottun {
+        margin-left: 16px;
+        box-sizing: border-box;
+        display: flex;
+        width: 24px;
+        height: 24px;
+        aspect-ratio: 1;
+        border: 2px solid $border_color;
+        border-radius: 12px;
+        align-items: center;
+        justify-content: center;
+        // color: white;
+        input {
+            display: none;
+        }
+        &.checked{
+            border: 2px solid $main;
+        }
+        #radiobottun-check {
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background-color: $main;
+        }
+        
+    }
+}

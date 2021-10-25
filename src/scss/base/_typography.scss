@@ -23,39 +23,44 @@ p {
 }
 
 h1 {
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+// @media screen and (min-width: 1501px) {
+//     h2{
+//         font-size: 14px;
+//     }
+// }
+
+// @media screen and (max-width: 1500px) {
+//     h2{
+//         font-size: 12px;
+//     }
+// }
+
+h2 {
+    font-size: 18px;
     font-weight: 500;
 }
 
-@media screen and (min-width: 1501px) {
-    h2{
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    h2{
-        font-size: 12px;
-    }
-}
-
-// h2 {
-//     // font-size: 15px;
-//     font-size: 1vw;
-//     // font-size: calc(10px + 1vw);
-//     font-weight: 700;
-// }
-
 h3 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 h4 {
+    font-weight: 16px;
+    font-weight: 500;
+}
+h5 {
+    font-weight: 14px;
+    font-weight: 500;
+}
+h6 {
     font-weight: 14px;
     font-weight: 400;
 }
-
 .row {
     display: flex;
     align-items: center;
@@ -83,3 +88,6 @@ h4 {
 //p
 //a
 //blockquote
+input{
+    outline: none;
+}
